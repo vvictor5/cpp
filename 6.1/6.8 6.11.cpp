@@ -3,9 +3,33 @@
 #define SIZE 10
 
 using namespace std;
-
+//void swap(int *, int *);
+//int del(int, int);
 int main(int argc, char *argv[])
 {
+    struct part {
+           int *partNumber;
+           char *partName;
+    };
+    typedef struct part Part;
+    Part a;
+    Part b[10];
+    Part *ptr;
+    ptr = b;
+    printf("Number:\n");
+    scanf("%d", &a.partNumber);
+    printf("Name:\n");
+    scanf("%s", &a.partName);
+    printf("Number:\n%d\n", a.partNumber);
+    printf("Name:\n%c\n\n", a.partName);
+    b[2] = a;
+    printf("%d%c\n\n", a);
+    printf("%c%d\n", ptr -> partName, ptr -> partNumber);
+    
+    
+    
+    
+    
     //6.8
     /*int t[9], a[3], b[6], i, k, c;
     for (i = 0; i <= 2; i++)
@@ -65,9 +89,24 @@ int main(int argc, char *argv[])
                
     for (i = 0; i <= SIZE - 1; i++)
         printf("%4d\n", aba[i]);*/
+/*    int i, a[] = {1, 2, 3, 4, 5};     
+    int n = 22;
+    int b = 13;
+    printf("%d\n", del(n, b));*/
         
-                 
            
     system("PAUSE");
     return EXIT_SUCCESS;
 }
+/*void swap(int *da1, int *da2)
+{
+     int temp;
+     temp = *da1;
+     *da1 = *da2;
+     *da2 = temp;
+}
+int del(int x, int y)
+{
+    return x/y;
+}*/
+ 
